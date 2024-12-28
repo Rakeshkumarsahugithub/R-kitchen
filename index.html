@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashmi's Kitchen</title>
+    <style>
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+
+}
+
+.container {
+    width: 100%;
+
+    
+}
+.container img{
+    width: 250px;
+}
+
+/* Header */
+header {
+    margin: 0;
+    background-color: white;
+    color: #0c0808;
+    padding: 20px 0;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    float: left;
+    margin-left: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #080505;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 27px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://monkeypodkitchen.com/img/monk/home/1-Feast.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f8520b;
+    padding: 150px 0;
+    text-align: center;
+    position: relative;
+}
+.hero h3{
+    color: white;
+    font-size: 30px;
+    
+}
+
+
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #090d5d;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 17px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: #e5533d;
+}
+.menu-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 70px;
+    padding: 20px;
+    gap: 80px;
+}
+
+.menu-item {
+    border: 3px solid #e74c3c;
+    border-radius: 45px;
+    padding: 10px;
+    width: 200px;
+    height: 180px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-item h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+
+.menu-lists h2 {
+    margin-left: 50px;
+    font-size: 2em;
+    color: #1c34ad;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+.menu-heading {
+    margin-left: 50px;
+    font-size: 2em;
+    color: #1c34ad;
+    margin-bottom: 20px;
+    text-align: left;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menu-card {
+            display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 40px;
+    border: 3px dashed #b30808;
+    border-radius: 25px;
+        }
+
+        .menu-item-details {
+            flex-grow: 1;
+    font-size: 27px;
+  font-weight: 600;
+    color: #c9c4c4;
+        }
+
+        .menu-item-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #f38a44;
+            
+        }
+
+        .menu-item-type {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #c61f0c;
+            margin-left: 10px;
+           
+        }
+
+        .non-veg-item .menu-item-type {
+            color: #d72a16; /* Red for Non-Veg */
+        }
+
+        .veg-item .menu-item-type {
+            color: #27ae60; /* Green for Veg */
+        }
+
+        .menu-item-description {
+            color: #a4a0a0;
+            margin-top: 5px;
+        }
+
+        .menu-item-price {
+            font-size: 35px;
+    font-weight: 600;
+    color: #39ae27;
+        }
+
+
+
+/* Footer */
+footer {
+    background-color: #dddadaf0;
+    color: #030202;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-name, .footer-links, .footer-hours, .footer-social {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.footer-name h2{
+    color: rgb(255, 102, 0);
+    font-size: 30px;
+}
+.footer-links h3, .footer-hours h3, .footer-social h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-links ul, .footer-hours ul {
+    list-style: none;
+}
+
+.footer-links ul li, .footer-hours ul li {
+    margin-bottom: 10px;
+    color: #e97407;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a {
+    color: #e97407;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.footer-social .social-icons a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.footer-social .social-icons img {
+    width: 30px;
+    height: 30px;
+    
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+.priceCol{
+    color: rgb(54, 53, 53);
+}
+
+
+.foodVal div {
+    margin-top: 100px;
+    margin-bottom: 70px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-around; /* Center the images horizontally */
+    gap: 10px; /* Space between the images */
+}
+
+.foodVal img {
+    width: 550px; /* Set a fixed width */
+    height: 350px; /* Set a fixed height */
+    
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="Screenshot 2024-10-22 201038.png">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h3>Welcome to the</h3>
+            <h2>Rashmi's Kitchen</h2>
+
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+
+            <div class="menu-icons">
+                <div class="menu-item">
+                    <img src="	https://tse1.mm.bing.net/th?id=OIP.9onYvtwv1Jud4UT8UavfFAHaJo&pid=Api&P=0&h=180" alt="Starters">
+                    <h3>Starters</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="	https://i.pinimg.com/originals/fb/37/7e/fb377eba2bf3a0346956d7eecf54c203.jpg" alt="Main Course">
+                    <h3>Main Course</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="	https://tse4.mm.bing.net/th?id=OIP.RUnmBoKm7w9-mN5BKDSaBAHaF7&pid=Api&P=0&h=180" alt="Beverages">
+                    <h3>Beverages</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.GjIwCh89aXCNSbCMbriWkwHaE7&pid=Api&P=0&h=180" alt="Specials">
+                    <h3>Specials</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="	https://tse2.mm.bing.net/th?id=OIP.OyyEpq3rSSvI8Aoo3b_E8gHaFL&pid=Api&P=0&h=180" alt="Kid's Menu">
+                    <h3>Kid's Menu</h3>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.95tsN6BBl3ABBYGZt2lj1gHaE8&pid=Api&P=0&h=180" alt="Desserts">
+                    <h3>Desserts</h3>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="menu-heading">Starters</h2>
+                <div class="menu-items">
+                    <div class="menu-card non-veg-item">
+                        <div class="menu-item-details">
+                            <span class="menu-item-name">Chicken Tikka</span>
+                            <span class="menu-item-type">NON-VEG</span>
+                            <p class="menu-item-description">Marinated chicken chunks grilled to perfection.</p>
+                        </div>
+                        <div class="menu-item-price"><span class="priceCol">₹</span>299</div>
+                    </div>
+                    <div class="menu-card non-veg-item">
+                        <div class="menu-item-details">
+                            <span class="menu-item-name">Fish Fingers</span>
+                            <span class="menu-item-type">NON-VEG</span>
+                            <p class="menu-item-description">Strips of fish coated in breadcrumbs and deep-fried to a crisp.</p>
+                        </div>
+                        <div class="menu-item-price"><span class="priceCol">₹</span>199</div>
+                    </div>
+                    <div class="menu-card non-veg-item">
+                        <div class="menu-item-details">
+                            <span class="menu-item-name">Mutton Seekh Kebab</span>
+                            <span class="menu-item-type">NON-VEG</span>
+                            <p class="menu-item-description">Minced mutton mixed with spices, shaped onto skewers, and cooked over charcoal.</p>
+                        </div>
+                        <div class="menu-item-price"><span class="priceCol">₹</span>199</div>
+                    </div>
+                    <div class="menu-card veg-item">
+                        <div class="menu-item-details">
+                            <span class="menu-item-name">Paneer Tikka</span>
+                            <span class="menu-item-type">VEG</span>
+                            <p class="menu-item-description">Cubes of cottage cheese marinated in spices and grilled, often served with chutney.</p>
+                        </div>
+                        <div class="menu-item-price"><span class="priceCol">₹</span>249</div>
+                    </div>
+                    <div class="menu-card veg-item">
+                        <div class="menu-item-details">
+                            <span class="menu-item-name">Hara Bhara Kebab</span>
+                            <span class="menu-item-type">VEG</span>
+                            <p class="menu-item-description">A healthy kebab made from spinach, peas, and potatoes, deep-fried to a crisp.</p>
+                        </div>
+                        <div class="menu-item-price"><span class="priceCol">₹</span>249</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="menu-heading">Main Course</h2>
+                <div class="menu-items">
+                    <div class="menu-card non-veg-item">
+                        <div class="menu-item-details">
+                            <span class="menu-item-name">Chicken Tikka</span>
+                            <span class="menu-item-type">NON-VEG</span>
+                            <p class="menu-item-description">Marinated chicken chunks grilled to perfection.</p>
+                        </div>
+                        <div class="menu-item-price"><span class="priceCol">₹</span>299</div>
+                    </div>
+                    <div class="menu-card non-veg-item">
+                        <div class="menu-item-details">
+                            <span class="menu-item-name">Fish Fingers</span>
+                            <span class="menu-item-type">NON-VEG</span>
+                            <p class="menu-item-description">Strips of fish coated in breadcrumbs and deep-fried to a crisp.</p>
+                        </div>
+                        <div class="menu-item-price"><span class="priceCol">₹</span>199</div>
+                    </div>
+                    <div class="menu-card non-veg-item">
+                        <div class="menu-item-details">
+                            <span class="menu-item-name">Mutton Seekh Kebab</span>
+                            <span class="menu-item-type">NON-VEG</span>
+                            <p class="menu-item-description">Minced mutton mixed with spices, shaped onto skewers, and cooked over charcoal.</p>
+                        </div>
+                        <div class="menu-item-price"><span class="priceCol">₹</span>199</div>
+                    </div>
+                    <div class="menu-card veg-item">
+                        <div class="menu-item-details">
+                            <span class="menu-item-name">Paneer Tikka</span>
+                            <span class="menu-item-type">VEG</span>
+                            <p class="menu-item-description">Cubes of cottage cheese marinated in spices and grilled, often served with chutney.</p>
+                        </div>
+                        <div class="menu-item-price"><span class="priceCol">₹</span>249</div>
+                    </div>
+                </div>
+            </div>
+    
+   <div class="foodVal">
+<div>
+    <img src="Screenshot 2024-10-22 191024.png">
+    <img src="Screenshot 2024-10-22 191024.png">
+</div>
+   </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-name">
+                <h2>Rashmi's Kitchen</h2>
+               
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h3>Opening Hours</h3>
+                <ul>
+                    <li>Sunday: 12 PM - 1 AM</li>
+                    <li>Monday: 12 PM - 1 AM</li>
+                    <li>Tuesday: 12 PM - 1 AM</li>
+                    <li>Wednesday: 12 PM - 1 AM</li>
+                    <li>Thursday: 12 PM - 1 AM</li>
+                    <li>Friday: 12 PM - 1 AM</li>
+                    <li>Saturday: 12 PM - 1 AM</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/7911211/facebook-icon-md.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://www.ynovation.de/wordpress/wp-content/uploads/2018/07/IG_Glyph_Fill.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/031/737/227/non_2x/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023-x-social-media-icon-free-png.png" alt="Twitter"></a>
+                   
+                </div>
+            </div>
+        </div>
+</body>
+</html>
