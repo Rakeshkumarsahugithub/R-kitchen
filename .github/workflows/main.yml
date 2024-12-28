@@ -1,5 +1,6 @@
 name: Rakesh Deployment
 
+# Trigger the action on push to the main branch
 on:
   push:
     branches:
@@ -8,17 +9,22 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1  # Corrected version from v1 to v2
 
+    steps:
+      # Step 1: Checkout the repository's code
+      - name: Checkout
+        uses: actions/checkout@v2  # Checkout action (v2 is recommended)
+
+      # Step 2: Configure AWS credentials
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # Corrected secret name
-          aws-region: us-east-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}  # AWS Access Key ID
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # AWS Secret Access Key
+          aws-region: us-east-1  # Set your AWS region
 
+      # Step 3: Deploy static files to S3 bucket
       - name: Deploy static to S3 bucket
-        run: aws s3 sync . s3://rk-kitchen --delete
+        run: aws s3 sync . s3://rk-kitchen --delete  # Sync local directory to S3 with the --delete option
+
 
